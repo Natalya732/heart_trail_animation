@@ -1,10 +1,25 @@
-body{
-    margin: 0%;
+body {
+    margin: 0;
     height: 100vh;
     background-color: #000;
     overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-span{
+
+.birthday-text {
+    color: gold;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    margin: 20px 0;
+    z-index: 10;
+}
+
+span {
     background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-64.png");
     width: 100px;
     height: 100px;
@@ -13,18 +28,37 @@ span{
     background-size: cover;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     animation: animate 10s linear;
+    z-index: 1;
 }
 
-@keyframes animate{
-    0%{
-        transform: translate(-50%,-50%);
+.letter-box {
+    overflow: scroll;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffd700;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    z-index: 5;
+    position: relative;
+    text-align: left;
+    backdrop-filter: blur(5px);
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
         opacity: 1;
         filter: hue-rotate(0deg);
     }
-    100%{
-        transform: translate(-50%,-5000%);
+    100% {
+        transform: translate(-50%, -5000%);
         opacity: 0;
         filter: hue-rotate(1200deg);
     }
